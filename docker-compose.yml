@@ -2,17 +2,17 @@ version: "3.9"
 
 services:
   secret-printer:
-    image: sokrates1989/secret-printer:DEBUG0.0.10
+    image: sokrates1989/secret-printer:latest
     secrets:
-      - serverStateChecker_botToken
+      - your_secret_name
     environment:
-      - SECRET_NAME=serverStateChecker_botToken
-      - SECRET_FILE=/run/secrets/serverStateChecker_botToken
+      - SECRET_NAME=your_secret_name
+      - SECRET_FILE=/run/secrets/your_secret_name
     deploy:
       mode: replicated
       replicas: 1
         
 
 secrets:
-  "serverStateChecker_botToken":
+  "your_secret_name":
     external: true
