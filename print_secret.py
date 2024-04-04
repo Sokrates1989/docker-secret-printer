@@ -5,6 +5,10 @@ SECRET_NAME = os.getenv("SECRET_NAME")
 with open(f"/run/secrets/{SECRET_NAME}", "r") as secret_file:
     SECRET_VALUE = secret_file.read().strip()
 
+# Divider and heading.
+print ("")
+print ("execututing python script: \"print_secret.py\"")
+
 # Print the secret value.
 print(f"Secret name: {SECRET_NAME}")
 print(f"Secret value: {SECRET_VALUE}")
