@@ -8,9 +8,6 @@ services:
     environment:
       - SECRET_NAME=serverStateChecker_botToken
       - botToken=/run/secrets/serverStateChecker_botToken
-    volumes:
-      - /swarm-server-state-check/configs/1blu-master-1:/code/config
-      - /serverInfo:/code/serverInfo
     deploy:
       mode: replicated
       replicas: 1
