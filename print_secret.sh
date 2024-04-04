@@ -5,7 +5,7 @@ SECRET_VALUE=$(cat /run/secrets/$SECRET_NAME)
 
 # Divider and heading.
 echo ""
-echo "Date: $(date +%Y-%m-%d %H:%M:%S)"
+echo "Date: $(date '+%Y-%m-%d %H:%M:%S')"
 echo "execututing shell script: \"print_secret.sh\""
 
 # Print the secret value.
