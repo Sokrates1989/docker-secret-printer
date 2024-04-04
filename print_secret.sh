@@ -7,5 +7,6 @@ SECRET_VALUE=$(cat /run/secrets/$SECRET_NAME)
 echo "Secret name: $SECRET_NAME"
 echo "Secret value: $SECRET_VALUE"
 
-# Print passed decret directly.
+# Print botToken from botToken_FILE.
+botToken=$(cat /run/secrets/$botToken_FILE)
 echo "botToken: $botToken"
