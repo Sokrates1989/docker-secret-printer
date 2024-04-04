@@ -1,14 +1,13 @@
 version: "3.9"
 
 services:
-  server-state-checker:
+  secret-printer:
     image: sokrates1989/secret-printer:DEBUG0.0.1
     secrets:
       - serverStateChecker_botToken
     environment:
       - SECRET_NAME=serverStateChecker_botToken
       - botToken=/run/secrets/serverStateChecker_botToken
-      # - botToken=6986634152:AAG9X1iyYI-hZqsUhtOHzU3hIsDB4JvXg50
     volumes:
       - /swarm-server-state-check/configs/1blu-master-1:/code/config
       - /serverInfo:/code/serverInfo
