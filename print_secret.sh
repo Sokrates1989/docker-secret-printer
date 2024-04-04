@@ -8,5 +8,5 @@ echo "Secret name: $SECRET_NAME"
 echo "Secret value: $SECRET_VALUE"
 
 # Print botToken from botToken_FILE.
-botToken=$(cat /run/secrets/$botToken_FILE)
+botToken=$(cat $botToken_FILE)
 echo "botToken: $botToken"

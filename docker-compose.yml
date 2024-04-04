@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   secret-printer:
-    image: sokrates1989/secret-printer:DEBUG0.0.4
+    image: sokrates1989/secret-printer:DEBUG0.0.5
     secrets:
       - serverStateChecker_botToken
     environment:

@@ -11,7 +11,7 @@ print(f"Secret value: {SECRET_VALUE}")
 
 # Fetch botToken from botToken_FILE.
 BOT_TOKEN_FILE = os.getenv("botToken_FILE")
-with open(f"/run/secrets/{BOT_TOKEN_FILE}", "r") as bot_token_file:
+with open(f"{BOT_TOKEN_FILE}", "r") as bot_token_file:
     BOT_TOKEN = bot_token_file.read().strip()
 
 # Print botToken.
