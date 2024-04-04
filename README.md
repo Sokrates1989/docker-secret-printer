@@ -1,6 +1,15 @@
 #  docker-secret-printer
 Get a swarm secret to check if it is working correctly
 
+
+# Usage
+
+```bash
+# Replace "your_secret_name" in the docker compose, then run.
+docker stack deploy -c <(docker-compose config) secret-printer
+```
+
+
 # Push image to dockerhub
 
 ```bash
