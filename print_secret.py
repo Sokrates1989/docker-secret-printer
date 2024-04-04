@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 # Fetch the secret from the Docker Swarm secret passed as environment variable.
 SECRET_NAME = os.getenv("SECRET_NAME")
@@ -6,8 +7,9 @@ with open(f"/run/secrets/{SECRET_NAME}", "r") as secret_file:
     SECRET_VALUE = secret_file.read().strip()
 
 # Divider and heading.
-print ("")
-print ("execututing python script: \"print_secret.py\"")
+print("")
+print(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+print("execututing python script: \"print_secret.py\"")
 
 # Print the secret value.
 print(f"Secret name: {SECRET_NAME}")
@@ -25,3 +27,6 @@ finally:
 
 # Print secret.
 print(f"secret: {secret}")
+
+# Divider.
+print("")
