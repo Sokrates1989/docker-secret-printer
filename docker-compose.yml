@@ -6,7 +6,7 @@ services:
     secrets:
       - serverStateChecker_botToken
     environment:
-      - SECRET_NAME=botTokenserverStateChecker_botToken
+      - SECRET_NAME=serverStateChecker_botToken
       - botToken=/run/secrets/serverStateChecker_botToken
       # - botToken=6986634152:AAG9X1iyYI-hZqsUhtOHzU3hIsDB4JvXg50
     volumes:
