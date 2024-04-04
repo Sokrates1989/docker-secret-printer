@@ -9,10 +9,15 @@ with open(f"/run/secrets/{SECRET_NAME}", "r") as secret_file:
 print(f"Secret name: {SECRET_NAME}")
 print(f"Secret value: {SECRET_VALUE}")
 
-# Fetch botToken from botToken_FILE.
-BOT_TOKEN_FILE = os.getenv("botToken_FILE")
-with open(f"{BOT_TOKEN_FILE}", "r") as bot_token_file:
-    BOT_TOKEN = bot_token_file.read().strip()
+# Fetch Secret from SECRET_FILE.
+try:
+    BOT_TOKEN_FILE = os.getenv("SECRET_FILE")
+    with open(f"{BOT_TOKEN_FILE}", "r") as bot_token_file:
+        secret = bot_token_file.read().strip()
+finally:
+    # If there is no SECRET_FILE.
+    if not secret:
+        secret = os.getenv('secret').strip().strip("\"") # or config_array["xxxxx"]["secret"].strip().strip("\"")
 
-# Print botToken.
-print(f"botToken: {BOT_TOKEN}")
+# Print secret.
+print(f"secret: {secret}")

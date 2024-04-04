@@ -14,7 +14,7 @@ RUN chmod +x /usr/local/bin/print_secret.py
 
 # Set environment variables.
 ENV SECRET_NAME=""
-ENV botToken_FILE=""
+ENV SECRET_FILE=""
 
 # Run the shell script first and then the Python script when the container starts.
 CMD ["/bin/sh", "-c", "/usr/local/bin/print_secret.sh && python3 /usr/local/bin/print_secret.py"]
