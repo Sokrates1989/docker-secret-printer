@@ -20,6 +20,8 @@ try:
     BOT_TOKEN_FILE = os.getenv("SECRET_FILE")
     with open(f"{BOT_TOKEN_FILE}", "r") as bot_token_file:
         secret = bot_token_file.read().strip()
+except:
+    pass
 finally:
     # If there is no SECRET_FILE.
     if not secret:
